@@ -69,4 +69,4 @@ CREATE TABLE OrderItems (
     FOREIGN KEY (FoodID) REFERENCES Foods(FoodID) ON DELETE CASCADE
 );
 INSERT INTO Users (Name, Email, Password, Role)
-VALUES ('Admin', 'admin@demo.com', 'admin123', 'Admin');
+VALUES ('Admin', 'admin@.com', 'admin123', 'Admin');
