@@ -1,0 +1,184 @@
+@charset "UTF-8";
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 900px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #343a40;
+}
+
+.table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn {
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-sm {
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
+}
+
+.table th, .table td {
+    padding: 1rem;
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+:root {
+    --main-bg-color: #2874f0;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    font-family: 'Lato', sans-serif;
+}
+
+nav{
+    display: flex;
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.yash{
+	margin-top:120px;
+}
+.logo img{
+    width: 88px;
+    padding: 0 25px;
+}
+
+nav ul{
+    height: 58px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none; 
+    padding: 0 23px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover{ 
+    font-weight: bolder;
+     color: white;
+}
+
+
+
+
+  .footer {
+    background-color: #f5f0f0;
+    color: #000000;
+    padding: 40px 0;
+  }
+  .footer h5 {
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  .footer a {
+    color: #000000;
+    text-decoration: none;
+  }
+  .footer a:hover {
+    color: #ff6600;
+  }
+  .footer .social-icons i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff;
+  }
+  .footer .btn-send {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+  }
+
+.yash1 {
+    margin-top: 200px;
+}
+
+
+.jay{
+	margin-top: 200px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+.btn {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
+
+.container {
+    margin-top: 40px;
+}

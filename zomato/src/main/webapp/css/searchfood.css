@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/* Custom Styles for the Search Food Page */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .form-control {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}

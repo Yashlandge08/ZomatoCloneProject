@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/* Custom Styles for the Edit Restaurant Page */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"].btn-secondary {
+    width: 100%;
+    background-color: #6c757d;
+}
+
+button[type="submit"].btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .form-control {
+        font-size: 14px;
+    }
+}

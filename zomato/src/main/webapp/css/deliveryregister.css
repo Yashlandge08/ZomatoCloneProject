@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* styles.css */
+body {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+}
+
+.registration-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+}
+
+h2 {
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}

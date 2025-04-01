@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+
+/* Custom Styles for View Customer Orders Page */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+.table th {
+    background-color: #f1f1f1;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 250px;
+}
+
+button {
+    padding: 6px 12px;
+}
+
+@media (max-width: 767px) {
+    .table {
+        font-size: 12px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    input[type="text"] {
+        width: 200px;
+    }
+}

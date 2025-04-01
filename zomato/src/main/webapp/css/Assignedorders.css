@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/* Custom Styles for Assigned Orders Page */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+h2 {
+    color: #333;
+    font-size: 28px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    font-size: 14px;
+}
+
+th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+table th {
+    background-color: #f1f1f1;
+}
+
+button[type="submit"] {
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+a.btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .table {
+        font-size: 12px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}

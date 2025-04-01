@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* Custom Styles for the Delivery Status Update Page */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.table {
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.form-select {
+    width: 200px;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+}
+
+button[type="submit"] {
+    width: 100%;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .table th, .table td {
+        font-size: 14px;
+    }
+    .form-select {
+        width: 100%;
+    }
+}
