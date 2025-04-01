@@ -1,0 +1,72 @@
+CREATE DATABASE restaurant_db;
+USE restaurant_db;
+
+
+
+CREATE TABLE Restaurants (
+    RestaurantID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Address TEXT NOT NULL,
+    Phone VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE Users (
+    UserID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    Password VARCHAR(100) NOT NULL,
+    Role ENUM('Admin', 'Restaurant', 'Customer', 'DeliveryPerson') NOT NULL,
+    RestaurantID INT DEFAULT NULL,
+    FOREIGN KEY (RestaurantID) REFERENCES Restaurants(RestaurantID) ON DELETE SET NULL
+);
+
+CREATE TABLE FoodCategories (
+    CategoryID INT AUTO_INCREMENT PRIMARY KEY,
+    CategoryName VARCHAR(100) NOT NULL,
+    Description TEXT
+);
+
+CREATE TABLE Foods (
+    FoodID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL,
+    Description TEXT,
+    CategoryID INT NOT NULL,
+    RestaurantID INT NOT NULL,
+    FOREIGN KEY (CategoryID) REFERENCES FoodCategories(CategoryID) ON DELETE CASCADE,
+    FOREIGN KEY (RestaurantID) REFERENCES Restaurants(RestaurantID) ON DELETE CASCADE
+);
+
+CREATE TABLE DeliveryPersons (
+    DeliveryPersonID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Phone VARCHAR(15) NOT NULL,
+    RestaurantID INT NOT NULL,
+    FOREIGN KEY (RestaurantID) REFERENCES Restaurants(RestaurantID) ON DELETE CASCADE
+);
+
+
+CREATE TABLE Orders (
+    OrderID INT AUTO_INCREMENT PRIMARY KEY,
+    CustomerID INT NOT NULL,
+    DeliveryPersonID INT DEFAULT NULL,
+    RestaurantID INT NOT NULL,
+    TotalAmount DECIMAL(10, 2) NOT NULL,
+    Status ENUM('Pending', 'Out for Delivery', 'Delivered') NOT NULL DEFAULT 'Pending',
+    OrderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (CustomerID) REFERENCES Users(UserID) ON DELETE CASCADE,
+    FOREIGN KEY (DeliveryPersonID) REFERENCES DeliveryPersons(DeliveryPersonID) ON DELETE SET NULL,
+    FOREIGN KEY (RestaurantID) REFERENCES Restaurants(RestaurantID) ON DELETE CASCADE
+);
+
+
+CREATE TABLE OrderItems (
+    OrderItemID INT AUTO_INCREMENT PRIMARY KEY,
+    OrderID INT NOT NULL,
+    FoodID INT NOT NULL,
+    Quantity INT NOT NULL,
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID) ON DELETE CASCADE,
+    FOREIGN KEY (FoodID) REFERENCES Foods(FoodID) ON DELETE CASCADE
+);
+INSERT INTO Users (Name, Email, Password, Role)
+VALUES ('Admin', 'admin@demo.com', 'admin123', 'Admin');
